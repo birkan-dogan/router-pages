@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Instructors = () => {
+  const navigate = useNavigate();
   const [instructors, setInstructors] = useState([]);
   const getInstructors = () => {
     fetch("https://jsonplaceholder.typicode.com/users")
@@ -21,6 +23,7 @@ const Instructors = () => {
           return (
             <div
               className="col sm-12 col-md-6 col-lg-4"
+              onClick={() => navigate(`/instructors/${id}`)}
               style={{ cursor: "pointer" }}
               key={id}
             >
