@@ -19,16 +19,29 @@ function Nav() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto mb-2 me-3 mb-lg-0">
             <li className="nav-item">
-              <NavLink to="/" className="nav-link active" aria-current="page">
+              <NavLink
+                style={({ isActive }) => ({ color: isActive && "red" })}
+                to="/"
+                className="nav-link active"
+                aria-current="page"
+              >
                 Home
               </NavLink>
             </li>
 
-            <NavLink to="/instructors" className="nav-link">
+            <NavLink
+              to="/instructors"
+              className="nav-link"
+              style={({ isActive }) => ({ color: isActive && "red" })}
+            >
               Instructors
             </NavLink>
             <li className="nav-item">
-              <NavLink to="/contact" className="nav-link">
+              <NavLink
+                to="/contact"
+                className="nav-link"
+                style={({ isActive }) => ({ color: isActive && "red" })}
+              >
                 Contact
               </NavLink>
             </li>
