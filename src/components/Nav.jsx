@@ -28,14 +28,24 @@ function Nav() {
                 Home
               </NavLink>
             </li>
-
-            <NavLink
-              to="/instructors"
-              className="nav-link"
-              style={({ isActive }) => ({ color: isActive && "red" })}
-            >
-              Instructors
-            </NavLink>
+            <li>
+              <NavLink
+                to="/instructors"
+                className="nav-link"
+                style={({ isActive }) => ({ color: isActive && "red" })}
+              >
+                Instructors
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/paths"
+                className="nav-link"
+                style={({ isActive }) => ({ color: isActive && "red" })}
+              >
+                Paths
+              </NavLink>
+            </li>
             <li className="nav-item">
               <NavLink
                 to="/contact"
